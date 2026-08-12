@@ -1,7 +1,5 @@
 // Edit your personal info here. This file feeds the whole site.
 
-import { Phone } from "lucide-react";
-
 export const profile = {
   name: "Abdelrahman Ehab Helmy",
   role: "Software Engineer / Software Engineering Student",
@@ -10,13 +8,15 @@ export const profile = {
   department: "Software Engineering",
   gradYear: "2027",
   location: "Egypt",
-  email: "abdelrahmaneh6@gmail.com", // TODO: add your email
-  github: "https://github.com/Abdo2552?utm_source=chatgpt.com", 
-  linkedin: "https://www.linkedin.com/in/abd-elrahman-helmy-297ba1351?utm_source=chatgpt.com", 
-  Phone: "+20 1113506661", // TODO: add your phone number
-  // TODO: add your LinkedIn profile URL
-};
 
+  email: "abdelrahmaneh6@gmail.com",
+
+  github: "https://github.com/Abdo2552",
+
+  linkedin: "https://www.linkedin.com/in/abd-elrahman-helmy-297ba1351",
+
+  phone: "01113506661",
+};
 export const skills = {
   Programming: [
     "Java",
