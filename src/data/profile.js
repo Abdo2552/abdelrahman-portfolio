@@ -13,7 +13,7 @@ export const profile = {
   email: "abdelrahmaneh6@gmail.com", // TODO: add your email
   github: "https://github.com/Abdo2552?utm_source=chatgpt.com", 
   linkedin: "https://www.linkedin.com/in/abd-elrahman-helmy-297ba1351?utm_source=chatgpt.com", 
-  Phone:"01113506661",
+  Phone: "+20 1113506661", // TODO: add your phone number
   // TODO: add your LinkedIn profile URL
 };
 
