@@ -1,4 +1,4 @@
-import { Mail, MapPin, Send } from "lucide-react";
+import { Mail, MapPin, Send, Phone } from "lucide-react";
 import { profile } from "../data/profile";
 import useReveal from "../useReveal";
 import { GithubIcon, LinkedinIcon } from "./BrandIcons";
@@ -60,7 +60,8 @@ export default function Contact() {
             <ContactLine icon={<Mail size={18} />} label="Email" value={profile.email} href={`mailto:${profile.email}`} />
             <ContactLine icon={<GithubIcon size={18} />} label="GitHub" value={profile.github} href={profile.github} />
             <ContactLine icon={<LinkedinIcon size={18} />} label="LinkedIn" value={profile.linkedin} href={profile.linkedin} />
-            <ContactLine icon={<MapPin size={18} />} label="Location" value={profile.location} />
+<ContactLine icon={<Phone size={18} />} label="Phone" value={profile.phone} href={`tel:${profile.phone}`} />
+<ContactLine icon={<MapPin size={18} />} label="Location" value={profile.location} />
           </div>
         </div>
 
