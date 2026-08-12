@@ -17,21 +17,56 @@ export const profile = {
   // TODO: add your LinkedIn profile URL
 };
 
-
 export const skills = {
-  Programming: ["Java", "Python", "C++"],
-  Web: ["HTML", "CSS", "JavaScript", "React"],
+  Programming: [
+    "Java",
+    "Python",
+    "C++",
+    "OOP",
+    "Data Structures & Algorithms",
+    "Exception Handling",
+    "File Handling",
+    "Generics"
+  ],
+
+  Web: [
+    "HTML5",
+    "CSS3",
+    "JavaScript",
+    "React",
+    "Tailwind CSS",
+    "PHP",
+    "Responsive Web Design"
+  ],
+
   Tools: [
     "Git",
     "GitHub",
     "IntelliJ IDEA",
     "VS Code",
     "XAMPP",
+    "Vercel",
     "Proteus",
-    "ModelSim",
-    "Data Structures"
+    "ModelSim"
   ],
-  Other: ["Microsoft Office", "Google Workspace"],
+
+  Database: [
+    "MySQL",
+    "SQL",
+    "Database Design",
+    "CRUD Operations"
+  ],
+
+  Other: [
+    "Verilog HDL",
+    "Digital Logic Design",
+    "UML",
+    "Software Design",
+    "Microsoft Office",
+    "Google Workspace",
+    "Problem Solving",
+    "Teamwork"
+  ]
 };
 
 export const journey = [
@@ -53,12 +88,14 @@ export const journey = [
 ];
 
 export const services = [
-  "Website Development",
+  "Web Development",
   "Front-End Development",
+  "React Development",
+  "Responsive Web Design",
   "Java Application Development",
-  "Object-Oriented Programming Solutions",
-  "Basic Database Integration",
-  "Responsive Website Design",
-  "Software Project Development",
-  "Website Maintenance and Improvements",
+  "Object-Oriented Programming",
+  "Database Integration",
+  "Software Engineering Projects",
+  "UML & Software Design",
+  "Website Maintenance",
 ];
