@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Space Grotesk", ui-sans-serif, sans-serif;
+  --font-body: "Inter", ui-sans-serif, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  --color-bg: #090c14;
+  --color-bg-soft: #0d1220;
+  --color-surface: #111726;
+  --color-surface-hi: #161d30;
+  --color-border: #232b40;
+  --color-text: #e8ecf6;
+  --color-muted: #8b93aa;
+  --color-blue: #5b8def;
+  --color-purple: #8b6cf6;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--color-blue);
+  color: #ffffff;
+}
+
+/* Signature: faint circuit-trace grid used behind the hero + section dividers */
+.trace-grid {
+  background-image:
+    linear-gradient(to right, rgba(91, 141, 239, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(91, 141, 239, 0.06) 1px, transparent 1px);
+  background-size: 42px 42px;
+}
+
+.glass {
+  background: rgba(17, 23, 38, 0.6);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid var(--color-border);
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, #5b8def, #8b6cf6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: var(--color-bg); }
+::-webkit-scrollbar-thumb { background: var(--color-border); border-radius: 8px; }
