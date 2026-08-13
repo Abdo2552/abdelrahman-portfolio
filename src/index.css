@@ -76,3 +76,50 @@ body {
 ::-webkit-scrollbar { width: 10px; }
 ::-webkit-scrollbar-track { background: var(--color-bg); }
 ::-webkit-scrollbar-thumb { background: var(--color-border); border-radius: 8px; }
+/* Mobile Responsive Fixes */
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img,
+svg,
+video {
+  max-width: 100%;
+}
+
+@media (max-width: 640px) {
+  body {
+    font-size: 15px;
+  }
+
+  .trace-grid {
+    background-size: 28px 28px;
+  }
+
+  section {
+    overflow-x: hidden;
+  }
+
+  input,
+  textarea,
+  button {
+    max-width: 100%;
+  }
+}
+
+/* Prevent long text and links from breaking the mobile layout */
+a,
+p,
+h1,
+h2,
+h3,
+h4 {
+  overflow-wrap: break-word;
+}

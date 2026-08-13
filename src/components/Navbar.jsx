@@ -17,26 +17,37 @@ export default function Navbar() {
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12);
+
     window.addEventListener("scroll", onScroll);
+
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   return (
     <header
-      className={`fixed top-0 inset-x-0 z-50 transition-colors duration-300 ${
-        scrolled ? "glass" : "bg-transparent border-b border-transparent"
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        scrolled
+          ? "glass shadow-lg"
+          : "bg-transparent border-b border-transparent"
       }`}
     >
-      <nav className="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
+      <nav className="max-w-6xl mx-auto flex items-center justify-between px-5 sm:px-6 py-4">
+        {/* Logo */}
         <a
           href="#home"
+          onClick={() => setOpen(false)}
           className="flex items-center gap-2 font-[var(--font-display)] font-semibold tracking-tight text-[var(--color-text)]"
         >
-          <TerminalSquare size={20} className="text-[var(--color-blue)]" />
-          AEH
+          <TerminalSquare
+            size={20}
+            className="text-[var(--color-blue)] shrink-0"
+          />
+
+          <span>AEH</span>
         </a>
 
-        <ul className="hidden md:flex items-center gap-8 font-[var(--font-mono)] text-[13px] text-[var(--color-muted)]">
+        {/* Desktop Navigation */}
+        <ul className="hidden md:flex items-center gap-6 lg:gap-8 font-[var(--font-mono)] text-[13px] text-[var(--color-muted)]">
           {LINKS.map((l) => (
             <li key={l.href}>
               <a
@@ -49,24 +60,32 @@ export default function Navbar() {
           ))}
         </ul>
 
+        {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-[var(--color-text)]"
+          type="button"
+          className="md:hidden flex items-center justify-center w-10 h-10 rounded-lg border border-[var(--color-border)] text-[var(--color-text)] hover:bg-[var(--color-surface)] transition-colors"
           aria-label={open ? "Close menu" : "Open menu"}
+          aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
         >
           {open ? <X size={22} /> : <Menu size={22} />}
         </button>
       </nav>
 
-      {open && (
-        <div className="md:hidden glass border-t border-[var(--color-border)]">
-          <ul className="flex flex-col px-6 py-4 gap-4 font-[var(--font-mono)] text-sm text-[var(--color-muted)]">
+      {/* Mobile Navigation */}
+      <div
+        className={`md:hidden overflow-hidden transition-all duration-300 ${
+          open ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
+        }`}
+      >
+        <div className="glass border-t border-[var(--color-border)]">
+          <ul className="flex flex-col px-5 py-4 gap-1 font-[var(--font-mono)] text-sm text-[var(--color-muted)]">
             {LINKS.map((l) => (
               <li key={l.href}>
                 <a
                   href={l.href}
                   onClick={() => setOpen(false)}
-                  className="block py-1 hover:text-[var(--color-text)]"
+                  className="flex items-center min-h-[44px] px-3 rounded-lg hover:bg-[var(--color-surface)] hover:text-[var(--color-text)] transition-colors"
                 >
                   {l.label}
                 </a>
@@ -74,7 +93,7 @@ export default function Navbar() {
             ))}
           </ul>
         </div>
-      )}
+      </div>
     </header>
   );
 }
