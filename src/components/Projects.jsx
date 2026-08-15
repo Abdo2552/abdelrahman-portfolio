@@ -7,7 +7,7 @@ export default function Projects() {
 
   return (
     <section id="projects" className="py-20 sm:py-28 px-5 sm:px-6">
-      <div ref={ref} className="reveal max-w-6xl mx-auto">
+      <div ref={ref} className="max-w-6xl mx-auto">
         <span className="font-[var(--font-mono)] text-xs text-[var(--color-blue)]">
           03 — Projects
         </span>
