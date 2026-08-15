@@ -1,5 +1,55 @@
-// Featured, fully-detailed projects (shown as large cards).
+import grillz1 from "../assets/101-grillz-1.png";
+import grillz2 from "../assets/101-grillz-2.png";
+import grillz3 from "../assets/101-grillz-3.png";
+import pcBuilder1 from "../assets/pc-builder-1.png";
+import pcBuilder2 from "../assets/pc-builder-2.png";
+import pcBuilder3 from "../assets/pc-builder-3.png";
+
+// Featured, fully-detailed projects
 export const featuredProjects = [
+  
+    {
+  id: "101-grillz",
+  featured: true,
+  name: "101 Grillz",
+  tagline: "A modern restaurant website built to showcase the brand and menu.",
+  overview:
+    "101 Grillz is a modern restaurant website designed to present the restaurant brand, menu, offers, and contact information through a clean and responsive experience.",
+  features: [
+    "Responsive restaurant-focused layout",
+    "Modern hero and promotional sections",
+    "Menu and food presentation",
+    "Clear contact and location information",
+    "Mobile-friendly design",
+    "Smooth and engaging user experience",
+  ],
+  tech: [
+    "React",
+    "JavaScript",
+    "CSS",
+    "Responsive Design",
+    "Vercel",
+  ],
+  role:
+    "Designed and developed the website interface, organized the content sections, and built the responsive experience for desktop and mobile users.",
+  liveUrl: "https://101-grillz-website.vercel.app/",
+  githubUrl: "",
+  images: [
+    {
+      label: "101 Grillz — Homepage",
+      file: grillz1,
+    },
+    {
+      label: "101 Grillz — Menu",
+      file: grillz2,
+    },
+    {
+      label: "101 Grillz — Contact",
+      file: grillz3,
+    },
+  ],
+},
+
   {
     id: "pc-builder",
     featured: true,
@@ -17,6 +67,7 @@ export const featuredProjects = [
       "Save and share a build publicly via a shareable link",
       "Admin dashboard for managing products, categories, brands, banners, reviews, and benchmark data",
     ],
+    
     tech: [
       "Laravel 12",
       "PHP 8.2",
@@ -34,8 +85,25 @@ export const featuredProjects = [
       { label: "Homepage", file: "" },
       { label: "Build a PC — compatibility checker", file: "" },
       { label: "Product catalog", file: "" },
+      
     ],
+    images: [
+  {
+    label: "PC Builder — Homepage",
+    file: pcBuilder1,
   },
+  {
+    label: "PC Builder — Build a PC",
+    file: pcBuilder2,
+  },
+  {
+    label: "PC Builder — Product Catalog",
+    file: pcBuilder3,
+  },
+],
+  },
+  
+
   {
     id: "coffee-shop",
     featured: true,
